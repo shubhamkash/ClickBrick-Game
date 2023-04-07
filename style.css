@@ -1,0 +1,154 @@
+body {
+    background-color: #333;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 100;
+    color: #fff;
+}
+
+#column-view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#bricks-container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 450px;
+  height: 450px;
+  display: grid;
+}
+
+.brick {
+  width: 125px;
+  height: 125px;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  transition: transform 1s;
+  border: 2px solid white;
+  opacity: 0;
+}
+
+@keyframes brick-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#bricks-container .brick {
+  animation: brick-animation 0.1s ease-out forwards;
+  position: relative;
+}
+
+#bricks-container .brick:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  animation-delay: 0s;
+}
+
+#bricks-container .brick:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  animation-delay: 0.2s;
+}
+
+#bricks-container .brick:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+  animation-delay: 0.4s;
+}
+
+#bricks-container .brick:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+  animation-delay: 0.6s;
+}
+
+#bricks-container .brick:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+  animation-delay: 0.8s;
+}
+
+#bricks-container .brick:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+  animation-delay: 1s;
+}
+
+#bricks-container .brick:nth-child(7) {
+  grid-column: 1;
+  grid-row: 3;
+  animation-delay: 1.2s;
+}
+
+#bricks-container .brick:nth-child(8) {
+  grid-column: 2;
+  grid-row: 3;
+  animation-delay: 1.4s;
+}
+
+#bricks-container .brick:nth-child(9) {
+  grid-column: 3;
+  grid-row: 3;
+  animation-delay: 1.6s;
+}
+
+#instruction{
+  text-transform: uppercase;
+  font-size: 50px;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+#game-over{
+  text-transform: uppercase;
+  font-size: 50px;
+  /* border: 1px solid red; */
+  text-align: center;
+  color:red;
+}
+
+.score{
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 50px;
+  /* border: 1px solid red; */
+  text-align: center;
+  line-height: 1;
+  margin-right: 50px;
+}
+
+.chance{
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 50px;
+  /* border: 1px solid red; */
+  text-align: center;
+  line-height: 1;
+  margin-left: 50px;
+}
+
+#chance-fist-char{
+  font-size: 200px;
+}
+
+#chance-second-char{
+  font-size: 50px;
+}
+
+#score-fist-char{
+  font-size: 200px;
+}
+
+#score-second-char{
+  font-size: 50px;
+}
